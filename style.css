@@ -18,6 +18,7 @@ body {
     height: 100vh;
     color: #ffffff;
 }
+
 /* Genral */
 .container {
     padding: 0 8.4rem;
@@ -27,6 +28,7 @@ body {
     width: 100%;
     height: auto;
 }
+
 /* Nav */
 header {
     background: var(--primary-dark);
@@ -53,15 +55,12 @@ header {
 
 
 
-.logo img{
+.logo img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    object-fit: cover;
 }
-/* .logo a {
-    color: #f9532d;
-    text-decoration: none;
-} */
 
 ul {
     display: flex;
@@ -120,12 +119,14 @@ li a:hover {
     column-gap: 6rem;
     align-items: center;
 }
+
 .main h3 {
     color: #fff;
     font-size: 1.5rem;
     opacity: 0;
     animation: topSideAni 1s ease forwards;
 }
+
 .main h1 {
     color: #fff;
     font-size: 4rem;
@@ -134,6 +135,7 @@ li a:hover {
     animation: leftSideAni 1s ease forwards;
     animation-delay: 1s;
 }
+
 .main button {
     background-color: transparent;
     color: var(--primary-color);
@@ -144,14 +146,17 @@ li a:hover {
     margin-top: 2rem;
     cursor: pointer;
 }
-.main button:hover{
+
+.main button:hover {
     border-color: white;
-    color:white;
+    color: white;
 }
+
 .images {
     margin-left: auto;
     width: 300px;
-}   
+}
+
 .images img {
     border-radius: 50%;
     box-shadow: 0 0 10px #D1D9E6;
@@ -160,10 +165,11 @@ li a:hover {
 /* Section 1 End */
 
 /* Roundin sec */
-  .main {
+.main {
     position: relative;
-  }
-  .big-circle {
+}
+
+.big-circle {
     height: 100%;
     width: 100%;
     position: relative;
@@ -175,103 +181,123 @@ li a:hover {
     -webkit-align-items: center;
     justify-content: center;
     -webkit-justify-content: center;
-    animation: Rotate 20s linear infinite;
-    -webkit-animation: Rotate 20s linear infinite;
-  }
-  .icon-block {
+    animation: Rotate 60s linear infinite;
+    -webkit-animation: Rotate 60s linear infinite;
+}
+
+.icon-block {
     width: 64px;
     height: 64px;
     position: absolute;
     border-radius: 50%;
     display: flex;
-    display: -webkit-flex;
     align-items: center;
-    -webkit-align-items: center;
     justify-content: center;
-    -webkit-justify-content: center;
     background-color: #fff;
     /* box-shadow: 0 0 10px #fff; */
     box-shadow: 0 0 10px;
-  }
-  .icon-block img {
-    margin: 0px auto;
-    width: 60%;
+    /* align-items: center; */
+}
+
+.icon-block a {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-block a img {
+    /* margin: 0px auto; */
+    width: 40px;
     animation: Rotate-reverse 20s linear infinite;
     -webkit-animation: Rotate-reverse 20s linear infinite;
-  }
-  .icon-block:first-child {
+    /* justify-content: center; */
+}
+
+.icon-block:first-child {
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-  }
-  .icon-block:nth-child(2) {
+}
+
+.icon-block:nth-child(2) {
     top: 50%;
     right: 0;
     transform: translate(50%, -50%);
     -webkit-transform: translate(50%, -50%);
-  }
-  .icon-block:nth-child(3) {
+}
+
+.icon-block:nth-child(3) {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 50%);
     -webkit-transform: translate(-50%, 50%);
-  }
-  .icon-block:nth-child(4) {
+}
+
+.icon-block:nth-child(4) {
     top: 50%;
     left: 0;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-  }
-  .rounding-sec {
+}
+
+.rounding-sec {
     position: relative;
     height: 400px;
     width: 400px;
-  }
-  .images {
+}
+
+.images {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-  }
-  /* keyframe animation */
 
-  @keyframes Rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+}
 
-  @-webkit-keyframes Rotate {
-    from {
-      -webkit-transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
+/* keyframe animation */
 
-  @keyframes Rotate-reverse {
+@keyframes Rotate {
     from {
-      transform: rotate(360deg);
+        transform: rotate(0deg);
     }
-    to {
-      transform: rotate(0deg);
-    }
-  }
 
-  @-webkit-keyframes Rotate-reverse {
-    from {
-      -webkit-transform: rotate(360deg);
-    }
     to {
-      -webkit-transform: rotate(0deg);
+        transform: rotate(360deg);
     }
-  }
+}
+
+@-webkit-keyframes Rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes Rotate-reverse {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes Rotate-reverse {
+    from {
+        -webkit-transform: rotate(360deg);
+    }
+
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+}
 
 /* Animation */
 @keyframes leftSideAni {
@@ -279,26 +305,31 @@ li a:hover {
         transform: translateX(-100px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
     }
 }
+
 @keyframes navani {
     0% {
         transform: translateY(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
+
 @keyframes topSideAni {
     0% {
         transform: translateY(-100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -309,15 +340,18 @@ li a:hover {
     .container {
         padding: 0 4.4rem;
     }
+
     .main h3 {
         color: #000;
         margin-top: 1rem;
     }
 }
+
 @media screen and (max-width: 990px) {
     .main {
         grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
     }
+
     .rounding-sec {
         margin: auto;
     }
@@ -333,6 +367,7 @@ li a:hover {
     body {
         height: auto;
     }
+
     header {
         height: auto;
         background-color: var(--primary-dark);
@@ -362,19 +397,23 @@ li a:hover {
         left: 0%;
         transition: all 0.3s ease;
     }
+
     .main {
         grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
         margin-top: 2rem;
         overflow-x: hidden;
     }
+
     .icon-block {
         width: 50px;
         height: 50px;
     }
+
     .rounding-sec {
         height: 300px;
         width: 300px;
     }
+
     .images {
         width: 200px;
     }
